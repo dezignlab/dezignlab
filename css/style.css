@@ -1,0 +1,250 @@
+/* Mobile Layout: 480px and below. */
+
+@font-face {
+    font-family: 'Slabo27px-Regular';
+    src: url(../fonts/Slabo27px-Regular.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+    padding-top: 1em;
+    font-family: lancelot;
+    font-size: 2.2em;
+}
+
+h2 {
+    text-align: center;
+    padding-top: 0.5em;
+    font-family: lancelot;
+    font-size: 1.8em;
+}
+
+h3 {
+    text-align: left;
+    padding-top: 0.5em;
+    font-family: lancelot;
+    font-size: 1.6em;
+    font-style: normal;
+    font-weight: 400;
+}
+
+/* Tag Selectors */
+
+body {
+    background-color: rgba(0, 0, 0, 1.00);
+    background-image: url(../images/dark_spot_background_texture_50611_1920x1080.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: 'Slabo27px-Regular';
+}
+
+img, object, embed, video, iframe {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+iframe {
+    display: block;
+    width: 1120px;
+    height: 630px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+header {
+    border-top: solid 2px rgba(178, 28, 8, 1);
+    border-bottom: solid 2px rgba(178, 28, 8, 1);
+    background-color: rgba(255, 255, 255, 1.00);
+    height: 250px;
+}
+
+header img {
+    width: auto;
+}
+
+section, aside, article {
+    padding: 10px;
+    margin: 2px 4px 4px 4px;
+}
+
+footer {
+    clear: both;
+    padding: 5px;
+    color: rgba(231, 241, 193, 1.00);
+    text-align: center;
+    background-color: rgba(197, 43, 40, 1.00);
+    border-top: solid 2px rgba(0, 44, 25, 1.00);
+    font-size: large;
+}
+
+footer a {
+    color: #FFF;
+    text-decoration: none;
+}
+
+/*********************************************************************************/
+
+/* Social Icon Styles                                                            */
+
+/*********************************************************************************/
+
+ul.contact {
+    margin: 0;
+    list-style: none;
+}
+
+ul.contact li {
+    display: inline-block;
+    padding: 0em 0.10em;
+    font-size: 1em;
+}
+
+ul.contact li span {
+    display: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul.contact li a {
+    color: #FFF;
+}
+
+ul.contact li a:before {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+/* Navigation Rules */
+
+nav {
+    margin-bottom: 1em;
+}
+
+nav ul {
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;
+}
+
+nav a {
+    width: 100%;
+    display: block;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    background-color: rgba(197, 43, 40, 1.00);
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 6px;
+}
+
+nav a:hover,
+nav a:active,
+nav a:focus,
+nav a.thispage {
+    font-style: normal;
+    font-weight: 400;
+    background-color: rgba(0, 1, 2, 1.00);
+    color: rgba(255, 255, 255, 1.00);
+}
+
+nav a.thispage {
+    background-color: rgba(52, 54, 66, 1.00);
+    font-weight: 500;
+}
+
+/* Image Related Rules */
+
+figure {
+    display: block;
+    max-width: 98%;
+}
+
+figure img {
+    max-width: 98%;
+}
+
+figcaption {
+    font-size: 0.875em;
+    font-weight: bold;
+    text-align: left;
+    display: block;
+    margin-top: 0.5em;
+}
+
+/* ID Selectors */
+
+#pagewrap {
+    width: 96%;
+    max-width: 2000px;
+    margin: auto;
+    border: solid 2px rgba(178, 28, 8, 1);
+    background-color: rgba(255, 255, 255, 0.80);
+}
+
+/* Class Selectors */
+
+.centered {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.floatleft {
+    float: left;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.floatright {
+    float: right;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+/* Tablet Layout: 481px to 800px. Inherits styles from: Mobile Layout. */
+
+@media screen and (min-width: 480px) {
+    #column-layout {
+        clear: both;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    #section_one,
+    #section_two {
+        flex: 1;
+        flex-basis: 48%;
+        padding: 16px;
+    }
+    aside {
+        padding: 16px;
+    }
+}
+
+/* Desktop Layout: 801px to a max of 1232px.  Inherits styles from: Mobile Layout and Tablet Layout. */
+
+@media screen and (min-width: 801px) {
+    header {
+        height: 200px;
+    }
+
+    nav a {
+        width: 20%;
+        float: left;
+        padding-top: 1em;
+        padding-right: .75em;
+        padding-bottom: 1em;
+        padding-left: .75em;
+    }
+}
